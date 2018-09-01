@@ -6,7 +6,16 @@ this is landing
   search shop/restaurant: <input type="text" /><button>search</button>
 </div>
 
+<!-- <a mat-raised-button  routerLink="{{shop.link}}">
+  {{shop.name|uppercase}}
+</a> -->
+
 
 <ul *ngFor="let shop of shops">
-  <li>{{shop.name}} {{shop.id}}</li>
+  <li>
+      <a routerLink="{{shop.link}}">{{shop.name}}</a>
+  </li>
 </ul>
+
+<!-- <router-outlet></router-outlet> -->
+

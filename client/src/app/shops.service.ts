@@ -9,7 +9,7 @@ import {Shop} from './shop';
 })
 export class ShopsService {
 
-  private MockedElementData = [{id:1,name:'Campos'},{id:2,name: 'Snackbar tiggelen'}]
+  private MockedElementData = [{id:1,name:'Campos',link:'/detail'},{id:2,name: 'Snackbar tiggelen',link:'/detail'}]
 
   constructor() { }
 
