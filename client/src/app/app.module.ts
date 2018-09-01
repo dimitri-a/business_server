@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { HerodetailComponent } from './components/herodetail/herodetail.component';
 
-import {AppRoutingModule} from './app-routing.module';
+import appRoutes from "./app.routes";
 
 @NgModule({
   declarations: [
@@ -14,9 +14,9 @@ import {AppRoutingModule} from './app-routing.module';
     HerodetailComponent
   ],
   imports: [
-    BrowserModule,AppRoutingModule
+    BrowserModule,appRoutes
   ],
-  providers: [],
+    providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
