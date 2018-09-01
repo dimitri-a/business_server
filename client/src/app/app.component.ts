@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ShopsService } from './shops.service';
+import {Shop} from './shop';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { ShopsService } from './shops.service';
 })
 export class AppComponent {
  
-  shops: string[] = null;
+  shops: Shop[] = null;
 
   constructor(private shopService: ShopsService) {
   }
