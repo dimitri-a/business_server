@@ -6,7 +6,7 @@ import { HerodetailComponent } from "./components/herodetail/herodetail.componen
 const routes: Routes = [
   { path: "landing", component: LandingComponent },
   { path: "landing/:id", component: HerodetailComponent },
-  { path: "", redirectTo: "/products", pathMatch: "full" }
+  { path: "", redirectTo: "/landing", pathMatch: "full" }
 ];
 
 export const routingModule: ModuleWithProviders = RouterModule.forRoot(routes);
