@@ -6,7 +6,7 @@ import { AppComponent } from "./app.component";
 
 const routes: Routes = [
   { path: "landing", component: LandingComponent },
-  { path: "land/:id", component: ShopDetailComponent },
+  { path: "shop/:id", component: ShopDetailComponent },
   { path: "", redirectTo: "/landing", pathMatch: "full" }
 ];
 

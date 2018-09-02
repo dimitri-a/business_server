@@ -22,6 +22,10 @@ export class ShopsService {
     });
   }
 
+  getShop(id:integer):any{
+    return this.MockedElementData[id];
+  }
+
 
 
 
