@@ -7,19 +7,13 @@ import { ShopsService } from '../../shops.service';
 })
 export class ShopDetailComponent implements OnInit {
 
-  private shopName;
+  private shop;
 
-  constructor(private route: ActivatedRoute,private shopService:ShopsService) {}
+  constructor(private route: ActivatedRoute, private shopService: ShopsService) { }
   ngOnInit() {
     this.route.params.subscribe(params => {
-  
-
-      debugger
-     this.shopName = this.shopService.getShop(params.id);
-
-     console.log(this.shopName)
-
-     
+      this.shop= this.shopService.getShop(Number(params.id))[0];
+      console.log(this.shop)
     });
   }
 

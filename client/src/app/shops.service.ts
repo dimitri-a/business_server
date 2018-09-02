@@ -22,8 +22,11 @@ export class ShopsService {
     });
   }
 
-  getShop(id:integer):any{
-    return this.MockedElementData[id];
+  getShop(id:number):any{
+    let result = this.MockedElementData.filter(shop=>{
+      return shop.id === id;
+    });
+    return result;
   }
 
 
