@@ -5,16 +5,14 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { HerodetailComponent } from './components/herodetail/herodetail.component';
 
-import appRoutes from "./app.routes";
+import { routingModule } from "./routing.module";
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LandingComponent,
-    HerodetailComponent
-  ],
+    AppComponent  ],
   imports: [
-    BrowserModule,appRoutes
+    BrowserModule,routingModule
   ],
     providers: [],
   bootstrap: [AppComponent]
