@@ -9,6 +9,7 @@ export class ShopDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    debugger
   }
 
 }
