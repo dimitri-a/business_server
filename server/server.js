@@ -20,7 +20,7 @@ router.route('/Shops/add').post((req, res) => {
     let shop = new Shop(req.body);
     shop.save()
         .then(shop => {
-            res.status(200).json({'Shop': 'Added successfully'});
+            res.status(200).json({ 'Shop': 'Added successfully' });
         })
         .catch(err => {
             res.status(400).send('Failed to create new record');
@@ -29,17 +29,37 @@ router.route('/Shops/add').post((req, res) => {
 
 
 router.route('/shops').get((req, res) => {
+
     Shop.find((err, shops) => {
         if (err)
-            console.log(err);
+        {
+            debugger
+        console.log(err);
+        }
         else
+        {
+            debugger
             res.json(shops);
+        }
     });
 });
 
 
 connection.once('open', () => {
     console.log('MongoDB database connection established successfully!');
+
+    Shop.find((err, shops) => {
+        if (err)
+        {
+            debugger
+        console.log(err);
+        }
+        else
+        {
+            debugger
+            console.log(shops);
+        }
+    });
 });
 
 app.use('/', router);
